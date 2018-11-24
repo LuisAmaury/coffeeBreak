@@ -46,8 +46,10 @@ class SaleController extends Controller
     {
         $sale = Sale::create($request->all());
 
-        return redirect()->route('sales.edit', $sale->id)
-            ->with('info', 'Categoria creada con exito');
+        $sale->products()->attach($request->get('products'));
+         return redirect()->route('sales.index');
+        // return redirect()->route('sales.edit', $sale->id)
+        //     ->with('info', 'Venta creada con exito');
     }
 
     /**
