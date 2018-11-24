@@ -18,9 +18,11 @@ class CreateSalesTable extends Migration
             $table->integer('user_id')->unsigned();
 
             // $table->string('file',128)->nullable();
+            // $table->string('ref_code');
             $table->double('total',8,2);
 
             $table->timestamps();
+
 
             //Relaciones
             //Si se elimina o actualiza un usuario se eliminan los post (cascade)
