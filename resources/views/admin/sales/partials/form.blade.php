@@ -1,6 +1,6 @@
 {{ Form::hidden('user_id', auth()->user()->id) }}
 <div class="form-group">
-  {{ Form::label('products', 'Articulos') }}
+  {{ Form::label('products', 'Productos') }}
   <div>
     @foreach($products as $product)
       <label>
@@ -26,21 +26,23 @@ saveSale.addEventListener('click', function(){
   console.log(cardNumber);
   console.log(total.value);
   var data = {
-    'ctaorigen': '00000000000000015',
+    'ctaorigen':  '0000000000000001',
     'ctadestino': '0000000000000010',
     'monto': 50,
     'detalle': 'venta de coffeeBreak'
   };
+  console.log(data);
   $.ajax({
     url: "https://spbank.herokuapp.com/api/payment",
     method: "POST",
     data: data,
-    cache: false,
-    contentType: false,
-    processData: false,
+    // cache: false,
+    // contentType: false,
+    // processData: false,
     success: function(response){
-      alert("Venta realizada con exito");
       console.log(response);
+      alert("Venta realizada con exito");
+
     },
     error: function(error){
       alert("Venta no exitosa");
