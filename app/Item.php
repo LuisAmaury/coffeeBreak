@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
   protected $fillable = [
-    'name','unitType','category_id','supplier_id','price','stock'
-  ]
+    'name','unitType','category_id','supplier_id','price','stock','slug'
+  ];
 
   // Post pertenece a un usuario
   public function user(){

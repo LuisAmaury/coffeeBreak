@@ -17,9 +17,9 @@ class CreateSuppliersTable extends Migration
             $table->increments('id');
             $table->string('name',128);
             $table->string('slug',128)->unique();//URL amigable
-            $table->unsignedInteger('phone');
+            $table->unsignedBigInteger('phone');
             $table->string('address')->nullable();
-            $table->unsignedInteger('cardNumber');
+            $table->string('cardNumber');
             $table->timestamps();
         });
     }

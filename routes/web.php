@@ -18,3 +18,17 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//web -> client
+// url de la ruta ... name -> nombre para mandarla llamar
+// Route::get('blog', 'Web\PageController@blog')->name('blog');
+// Route::get('entrada/{slug}', 'Web\PageController@post')->name('post');
+// Route::get('categoria/{slug}', 'Web\PageController@category')->name('category');
+// Route::get('etiqueta/{slug}', 'Web\PageController@tag')->name('tag');
+
+//admin
+Route::resource('categories','Admin\CategoryController');
+Route::resource('items','Admin\ItemController');
+Route::resource('products','Admin\ProductController');
+Route::resource('suppliers','Admin\SupplierController');
+Route::resource('sales','Admin\SaleController');

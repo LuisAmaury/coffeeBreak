@@ -8,7 +8,7 @@ class Buy extends Model
 {
   protected $fillable = [
     'supplier_id','total'
-  ]
+  ];
 
   // Post pertenece a un usuario
   public function supplier(){

@@ -7,8 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Supplier extends Model
 {
   protected $fillable = [
-    'name','phone','address','cardNumber'
-  ]
+    'name','phone','address','cardNumber','slug'
+  ];
 
   public function items(){
     return $this->hasMany(Item::class);

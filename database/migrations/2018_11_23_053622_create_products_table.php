@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('slug',128)->unique();//URL amigable
             $table->mediumText('description')->nullable();
             $table->double('price',8,2);
+            // $table->string('file',128)->nullable();
             $table->timestamps();
         });
     }
