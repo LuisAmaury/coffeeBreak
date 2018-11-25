@@ -36,7 +36,7 @@ $(document).ready(function(){
           console.log(products);
           for(prod in productsCheck){
             let id = parseInt(productsCheck[prod]) - 1;
-            totalPrice += products[id].price;
+            totalPrice += parseFloat(products[id].price);
             // console.log(productsCheck[id]);
 
           }
